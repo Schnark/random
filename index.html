@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>Random</title>
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="icons/site.webmanifest">
+<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-config" content="icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<script>
+if (navigator.serviceWorker && !(navigator.mozApps && navigator.mozApps.installPackage)) {
+	navigator.serviceWorker.register('sw.js');
+}
+</script>
+<link rel="stylesheet" href="res/style.css">
+<style id="static-style"></style>
+<style id="animation-style"></style>
+<script src="res/app.js" defer></script>
+<script src="res/random.js" defer></script>
+<script src="res/coin.js" defer></script>
+<script src="res/dice.js" defer></script>
+<script src="res/cards.js" defer></script>
+<script src="res/bottle.js" defer></script>
+<script src="res/wheel.js" defer></script>
+<script src="res/generator.js" defer></script>
+<script src="res/init.js" defer></script>
+</head><body>
+<nav id="main-nav">
+<button data-id="coin">
+<svg width="30" height="30">
+	<circle r="13" cx="15" cy="15" stroke-width="2" stroke="currentColor" fill="none" />
+	<path d="M 11,14 L 16,8 L 16,21" stroke="currentColor" stroke-width="3" stroke-linejoin="bevel" fill="none" />
+</svg>
+</button>
+<button data-id="cards">
+<svg width="30" height="30">
+	<rect width="18" height="28" x="6" y="1" rx="5" ry="5" stroke-width="2" stroke="currentColor" fill="none" />
+	<path d="M 15,11 C 22,6 22,16 15,21 C 8,16 8,6 15,11 z" stroke="none" fill="currentColor" />
+</svg></button>
+<button data-id="dice">
+<svg width="30" height="30">
+	<rect width="22" height="22" x="4" y="4" rx="5" ry="5" stroke-width="2" stroke="currentColor" fill="none" />
+	<circle r="2" cx="10" cy="10" stroke="none" fill="currentColor" />
+	<circle r="2" cx="10" cy="20" stroke="none" fill="currentColor" />
+	<circle r="2" cx="15" cy="15" stroke="none" fill="currentColor" />
+	<circle r="2" cx="20" cy="10" stroke="none" fill="currentColor" />
+	<circle r="2" cx="20" cy="20" stroke="none" fill="currentColor" />
+</svg></button>
+<button data-id="bottle">
+<svg width="30" height="30">
+	<path d="M 10,29 A 3,3 0,0,1 7,26 L 7,17 C 7,9 12.5,15 12,1.5 C 12,1 18,1 18,1.5 C 17.5,15 23,9 23,17 L 23,26 A 3,3 0,0,1 20,29 z" stroke-width="2" stroke="currentColor" fill="none" />
+</svg>
+</button>
+<button data-id="wheel">
+<svg width="30" height="30">
+	<circle r="13" cx="15" cy="15" stroke-width="2" stroke="currentColor" fill="none" />
+	<path d="M 15,15 L 15,2 A 13,13 0,0,1 28,15 L 2,15 A 13,13 0,0,0 15,28 z" stroke="none" fill="currentColor" />
+</svg>
+</button>
+<button data-id="generator">
+<svg width="30" height="30">
+	<rect width="22" height="22" x="4" y="4" rx="5" ry="5" stroke-width="2" stroke="currentColor" fill="none" />
+	<path d="M 4,17 C 14,17 11,7 15,7 C 19,7 16,17 26,17" stroke-width="2" stroke="currentColor" fill="none" />
+	<path d="M 4,20 L 26,20 M 15,4 L 15, 26" stroke-width="1" stroke="currentColor" fill="none" />
+</svg>
+</button>
+<button>
+<svg width="30" height="30">
+	<path fill="none" stroke="currentColor" stroke-width="2" d="M 23.3,16.8 A 8.5,8.5 0,0,0 23.3,13.2 L 27.1,10.3 A 13,13 0,0,0 25.1,6.8 L 20.7,8.7 A 8.5,8.5 0,0,0 17.6,6.9 L 17,2.2 A 13,13 0,0,0 13,2.2 L 12.4,6.9 A 8.5,8.5 0,0,0 9.3,8.7 L 4.9,6.8 A 13,13 0,0,0 2.9,10.3 L 6.7,13.2 A 8.5,8.5 0,0,0 6.7,16.8 L 2.9,19.7 A 13,13 0,0,0 4.9,23.2 L 9.3,21.3 A 8.5,8.5 0,0,0 12.4,23.1 L 13,27.8 A 13,13 0,0,0 17,27.8 L 17.6,23.1 A 8.5,8.5 0,0,0 20.7,21.3 L 25.1,23.2 A 13,13 0,0,0 27.1,19.7 Z"/>
+	<circle fill="none" stroke="currentColor" stroke-width="2" cx="15" cy="15" r="4"/>
+</svg>
+</button>
+</nav>
+<div id="page"></div>
+</body></html>

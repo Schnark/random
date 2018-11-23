@@ -1,0 +1,19 @@
+{
+	"@comment": "Note that the code to transform these data into a webpage is in https://github.com/Schnark/schnark.github.io",
+	"title": {
+		"en": "Random – App for Firefox OS",
+		"de": "Zufall – App für Firefox OS"
+	},
+	"serviceworker": true,
+	"icon": "res/icon-128.png",
+	"screenshots": [
+		"1.png",
+		"2.png",
+		"3.png",
+		"4.png"
+	],
+	"desc": {
+		"en": ["This app provides you with all kinds of different random values: You can toss a coin, draw cards, throw a dice, spin a bottle or a wheel of fortune, or generate random numbers."],
+		"de": ["Diese App liefert alle möglichen Zufallswerte: Du kannst eine Münze werfen, Karten ziehen, einen Würfel werfen, eine Flasche oder ein Glücksrad drehen, oder Zufallszahlen erzeugen lassen."]
+	}
+}

@@ -1,0 +1,42 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+#main-nav {
+	text-align: center;
+}
+
+#main-nav button {
+	color: black;
+	background: transparent;
+	font: inherit;
+	border: none;
+	cursor: pointer;
+	padding: 0.4em 0.2em;
+	margin: 0.2em;
+}
+
+#main-nav ::-moz-focus-inner {
+  border: 0;
+}
+
+#main-nav .selected {
+	color: blue;
+}
+
+#page {
+	margin: 1em auto;
+	padding: 0 1em;
+	max-width: 50em;
+	overflow: hidden;
+}
+
+select,
+input,
+textarea {
+	font: inherit;
+	width: 100%;
+}

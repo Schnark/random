@@ -1,0 +1,21 @@
+{
+	"version": "1.0",
+	"name": "Random",
+	"description": "Generate random numbers, etc.",
+	"size": 80793,
+	"package_path": "http://localhost:8080/random.zip",
+	"icons": {
+		"128": "/res/icon-128.png",
+		"512": "/res/icon-512.png"
+	},
+	"developer": {
+		"name": "Michael Müller",
+		"url": "https://github.com/Schnark"
+	},
+	"locales": {
+		"de": {
+			"name": "Zufall"
+		}
+	},
+	"orientation":"portrait-primary"
+}
