@@ -1,5 +1,5 @@
 {
-	"version": "1.0",
+	"version": "1.1",
 	"name": "Random",
 	"description": "Generate random numbers, etc.",
 	"launch_path": "/index.html",
@@ -15,6 +15,5 @@
 		"de": {
 			"name": "Zufall"
 		}
-	},
-	"orientation":"portrait-primary"
+	}
 }

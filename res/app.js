@@ -81,9 +81,12 @@ app.getParams = function (name) {
 };
 
 app.show = function (name) {
-	var R = app.constructors[name], r;
-	r = new R(app.getParams(name));
-	r.init(document.getElementById('page'));
+	var R = app.constructors[name];
+	if (app.currentObject) {
+		app.currentObject.onExit();
+	}
+	app.currentObject = new R(app.getParams(name));
+	app.currentObject.init(document.getElementById('page'));
 };
 
 app.loadConfig = function () {

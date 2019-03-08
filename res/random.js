@@ -189,12 +189,10 @@ Random.prototype.getAnimation = function (/*from, to, duration*/) {
 	return '';
 };
 
-Random.prototype.onInit = function (container) {
-	var i, trigger;
-	trigger = container.getElementsByClassName('trigger');
-	for (i = 0; i < trigger.length; i++) {
-		trigger[i].addEventListener('click', this.onRefresh.bind(this), false);
-	}
+Random.prototype.onInit = function (/*container*/) {
+};
+
+Random.prototype.onExit = function () {
 };
 
 Random.prototype.onBeforeAnimation = function (/*newVal*/) {
@@ -210,7 +208,7 @@ Random.prototype.onRefresh = function () {
 	}
 	this.isRefreshing = true;
 	newVal = this.getRandom();
-	duration = this.getDuration();
+	duration = this.getDuration(this.currentVal, newVal);
 	css = this.getAnimation(this.currentVal, newVal, duration);
 	this.onBeforeAnimation(newVal);
 	this.currentVal = newVal;
@@ -224,6 +222,7 @@ Random.prototype.onRefresh = function () {
 };
 
 Random.prototype.init = function (page) {
+	var i, trigger;
 	page.innerHTML = '<div id="container"></div><div id="display"></div><ol id="history"></ol>';
 	this.elements = {
 		css: document.getElementById('static-style'),
@@ -236,6 +235,11 @@ Random.prototype.init = function (page) {
 	this.elements.css.textContent = this.getBasicCss() + this.getCss();
 	this.elements.animation.textContent = this.getAnimation(this.currentVal, this.currentVal, 0);
 	this.elements.container.innerHTML = this.getHtml();
+
+	trigger = this.elements.container.getElementsByClassName('trigger');
+	for (i = 0; i < trigger.length; i++) {
+		trigger[i].addEventListener('click', this.onRefresh.bind(this), false);
+	}
 	this.onInit(this.elements.container);
 };
 

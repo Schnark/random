@@ -30,12 +30,38 @@ Bottle.readConfig = function (/*container*/) {
 
 Bottle.prototype = new Random();
 
+Bottle.prototype.onInit = function () {
+	Random.prototype.onInit.apply(this, arguments);
+	if (screen.orientation && screen.orientation.lock) {
+		screen.orientation.lock('portrait-primary');
+	} else if (screen.lockOrientation) {
+		screen.lockOrientation('portrait-primary');
+	} else if (screen.mozLockOrientation) {
+		screen.mozLockOrientation('portrait-primary');
+	} else if (screen.msLockOrientation) {
+		screen.msLockOrientation('portrait-primary');
+	}
+};
+
+Bottle.prototype.onExit = function () {
+	Random.prototype.onExit.apply(this, arguments);
+	if (screen.orientation && screen.orientation.unlock) {
+		screen.orientation.unlock();
+	} else if (screen.unlockOrientation) {
+		screen.unlockOrientation();
+	} else if (screen.mozUnlockOrientation) {
+		screen.mozUnlockOrientation();
+	} else if (screen.msUnlockOrientation) {
+		screen.msUnlockOrientation();
+	}
+};
+
 Bottle.prototype.getRandom = function () {
 	return Random.randRange(0, 360);
 };
 
 Bottle.prototype.getHtml = function () {
-	return '<img id="bottle" class="trigger" src="res/bottle.jpg"/>';
+	return '<img id="bottle" class="trigger" src="res/bottle.jpg" alt="">';
 };
 
 Bottle.prototype.getCss = function () {

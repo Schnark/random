@@ -1,8 +1,8 @@
 {
-	"version": "1.0",
+	"version": "1.1",
 	"name": "Random",
 	"description": "Generate random numbers, etc.",
-	"size": 80793,
+	"size": 80958,
 	"package_path": "https://schnark.github.io/random/random.zip",
 	"icons": {
 		"128": "/res/icon-128.png",
@@ -16,6 +16,5 @@
 		"de": {
 			"name": "Zufall"
 		}
-	},
-	"orientation":"portrait-primary"
+	}
 }
