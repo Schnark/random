@@ -61,7 +61,7 @@ Bottle.prototype.getRandom = function () {
 };
 
 Bottle.prototype.getHtml = function () {
-	return '<img id="bottle" class="trigger" src="res/bottle.jpg" alt="">';
+	return '<img id="bottle" class="trigger" src="res/bottle.jpg">';
 };
 
 Bottle.prototype.getCss = function () {

@@ -3,7 +3,7 @@
 "use strict";
 
 var PREFIX = 'random',
-	VERSION = '1.1',
+	VERSION = '1.2',
 	FILES = [
 		'index.html',
 		'res/app.js',
@@ -14,6 +14,8 @@ var PREFIX = 'random',
 		'res/dice.js',
 		'res/euro-de.gif',
 		'res/euro.gif',
+		'res/fr-k.jpg',
+		'res/fr-z.jpg',
 		'res/generator.js',
 		'res/init.js',
 		'res/random.js',

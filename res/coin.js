@@ -15,19 +15,20 @@ Coin.l10n = {
 		0: ['Kopf', 'K'],
 		1: ['Zahl', 'Z'],
 		design: 'Art der Münze:',
-		designs: ['Einfach', 'Euro (Deutschland)']
+		designs: ['Einfach', 'Euro (Deutschland)', 'Schweizer Franken']
 	},
 	en: {
 		0: ['Head', 'H'],
 		1: ['Tails', 'T'],
 		design: 'Type of coin:',
-		designs: ['Simple', 'Euro (Germany)']
+		designs: ['Simple', 'Euro (Germany)', 'Swiss franc']
 	}
 };
 
 Coin.designs = [
 	['', '', '#b49b5e'],
-	['res/euro-de.gif', 'res/euro.gif', '#b49b5e']
+	['res/euro-de.gif', 'res/euro.gif', '#b49b5e'],
+	['res/fr-k.jpg', 'res/fr-z.jpg', '#d6d6d6']
 ];
 
 Coin.getDefaultParams = function () {
@@ -122,6 +123,9 @@ Coin.prototype.getCss = function () {
 Coin.prototype.getAnimation = function (from, to, duration) {
 	var xRot = Math.round(Random.randNormalClamped(1.75, 0.5, -2, 5)),
 		zRot = Math.round(Random.randNormalClamped(1.25, 0.5, -2, 5));
+	if (xRot === 2 + (from - to) / 2) {
+		xRot += Random.randInt(2) * 2 - 1;
+	}
 	return Random.createAnimation('#coin', {
 		'0%': Random.getTransformPrefix() + 'transform: translate(0,0) ' +
 			'rotateY(' + (from * 180) + 'deg) ' +
